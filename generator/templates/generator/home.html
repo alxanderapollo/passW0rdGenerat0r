@@ -1,2 +1,21 @@
-<h1>this is the new home page</h1>
-{{password}}
+<h1>Pa$$W0rd Generat0r</h1>
+{{password}} 
+
+<!-- Take in user input as soon as submited will take a user to another page-->
+<!-- url will go into the url's file and look for a function with the name= password-->
+<form action="{% url 'password' %}">
+    <select  name="length"> <!-- represent the length of the pass word-->
+        <!--option list-->
+        <option value="6">6 char long</option>
+        <option value="6">7 char long</option>
+        <option value="6">8 char long</option>
+        <option value="6">9 char long</option>
+        <option value="6">10 char long</option>
+        <option value="6">11 char long</option>
+    </select>
+
+    <!-- Submit button for the selected action-->
+    <input type="submit" value="Generate Password">
+
+
+</form>

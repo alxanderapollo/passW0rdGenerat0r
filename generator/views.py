@@ -11,8 +11,8 @@ from django.http import HttpResponse
 
 #password  is dictionar key map that can be referenced inside of the home.html file
 def home(request):
-    return render(request,'generator/home.html', {'password':'apples'})
+    return render(request,'generator/home.html')
 
 #eggs page
-def eggs(request):
-    return HttpResponse('<h1>Arrepas y huevos</h1>')
+def password(request):
+    return render(request,'generator/password.html')
