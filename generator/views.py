@@ -38,11 +38,11 @@ def password(request):
     if request.GET.get('numbers'):
         characters.extend(list('0123456789'))
         
-          
-        
     length = int(request.GET.get('length',12)) #12 represents the default value
     for x in range(length):
         thePassWord += random.choice(characters)
     
-     
     return render(request,'generator/password.html', {'password':thePassWord})
+
+def aboutMe(request):
+    return render(request, 'generator/aboutMe.html')

@@ -24,7 +24,7 @@ from generator import views
 # views.home is a function, but its also what will appear on the page and it  will send the user to a page and whats displaced on views .py will appear as the page
 #same with views.eggs
 urlpatterns = [
-    path('', views.home),
+    path('', views.home, name ="home"),
     path('generatedpassword/', views.password, name="password"),
-
+    path('aboutMePage/', views.aboutMe, name = "aboutMe"),
 ]
