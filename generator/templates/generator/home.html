@@ -7,13 +7,25 @@
     <select  name="length"> <!-- represent the length of the pass word-->
         <!--option list-->
         <option value="6">6 char long</option>
-        <option value="6">7 char long</option>
-        <option value="6">8 char long</option>
-        <option value="6">9 char long</option>
-        <option value="6">10 char long</option>
-        <option value="6">11 char long</option>
+        <option value="7">7 char long</option>
+        <option value="8">8 char long</option>
+        <option value="9">9 char long</option>
+        <option value="10">10 char long</option>
+        <option value="11">11 char long</option>
+        <!-- 12 is the default value for when picking the length -->
+        <option value="12" selected="selected">12 char long</option>
+        <option value="13">13 char long</option>
+        <option value="14">14 char long</option>
+        <option value="15">15 char long</option>
     </select>
-
+    <!-- user can choose between making letters uppercase, adding numbers and/or adding special characters-->
+    <br>
+    <input type ="checkbox" name = "uppercase">UpperCase
+    <br>
+    <input type ="checkbox" name = "numbers"> Numbers
+    <br>
+    <input type ="checkbox" name = "Special">Special characters
+    <br>
     <!-- Submit button for the selected action-->
     <input type="submit" value="Generate Password">
 

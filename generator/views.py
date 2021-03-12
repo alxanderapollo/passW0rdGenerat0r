@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse 
+#wan to import randomness when creating a pass
+import random 
 
 
 
@@ -15,4 +17,14 @@ def home(request):
 
 #eggs page
 def password(request):
-    return render(request,'generator/password.html')
+    #varaible to hold in the passWord 
+    thePassWord = ''
+    #takes this string and breaks it up into an array
+    characters = list('abcdefghijklmnopqrstuvwxyz')
+    #length of the password
+    length = 10
+    for x in range(length):
+        thePassWord += random.choice(characters)
+    
+     
+    return render(request,'generator/password.html', {'password':thePassWord})
