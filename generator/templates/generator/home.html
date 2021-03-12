@@ -1,33 +1,36 @@
-<h1>Pa$$W0rd Generat0r</h1>
-{{password}} 
+<!-- boot strap import-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-<!-- Take in user input as soon as submited will take a user to another page-->
-<!-- url will go into the url's file and look for a function with the name= password-->
-<form action="{% url 'password' %}">
-    <select  name="length"> <!-- represent the length of the pass word-->
-        <!--option list-->
-        <option value="6">6 char long</option>
-        <option value="7">7 char long</option>
-        <option value="8">8 char long</option>
-        <option value="9">9 char long</option>
-        <option value="10">10 char long</option>
-        <option value="11">11 char long</option>
-        <!-- 12 is the default value for when picking the length -->
-        <option value="12" selected="selected">12 char long</option>
-        <option value="13">13 char long</option>
-        <option value="14">14 char long</option>
-        <option value="15">15 char long</option>
-    </select>
-    <!-- user can choose between making letters uppercase, adding numbers and/or adding special characters-->
-    <br>
-    <input type ="checkbox" name = "uppercase">UpperCase
-    <br>
-    <input type ="checkbox" name = "numbers"> Numbers
-    <br>
-    <input type ="checkbox" name = "Special">Special characters
-    <br>
-    <!-- Submit button for the selected action-->
-    <input type="submit" value="Generate Password">
+<div class ="container text-center">
+    <h1>Pa$$W0rd Generat0r</h1>
+    {{password}} 
 
-
-</form>
+    <!-- Take in user input as soon as submited will take a user to another page-->
+    <!-- url will go into the url's file and look for a function with the name= password-->
+    <form action="{% url 'password' %}">
+        <select  name="length"> <!-- represent the length of the pass word-->
+            <!--option list-->
+            <option value="6">6 char long</option>
+            <option value="7">7 char long</option>
+            <option value="8">8 char long</option>
+            <option value="9">9 char long</option>
+            <option value="10">10 char long</option>
+            <option value="11">11 char long</option>
+            <!-- 12 is the default value for when picking the length -->
+            <option value="12" selected="selected">12 char long</option>
+            <option value="13">13 char long</option>
+            <option value="14">14 char long</option>
+            <option value="15">15 char long</option>
+        </select> Length
+        <!-- user can choose between making letters uppercase, adding numbers and/or adding special characters-->
+        <br>
+        <input type ="checkbox" name = "uppercase">UpperCase
+        <br>
+        <input type ="checkbox" name = "numbers"> Numbers
+        <br>
+        <input type ="checkbox" name = "Special">Special characters
+        <br>
+        <!-- Submit button for the selected action-->
+        <input type="submit" value="Generate Password" class = "btn btn-primary"> <!-- btn primary is bootstrap button-->
+    </form>
+</div>
